@@ -1,0 +1,140 @@
+@use "../mixins/media-mixin" as *;
+.burger {
+  width: 18px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  @include lg-min {
+    display: none;
+  }
+  &-item {
+    position: absolute;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    width: 18px;
+    background-color: white;
+    height: 1.5px;
+    top: 0;
+    border-radius: 2px;
+  }
+  &-item:nth-of-type(2){
+    top: 7px;
+    height: 2px;
+  }
+  &-item:nth-of-type(3){
+    top: 14px;
+    height: 2px;
+  }
+}
+
+.mobile {
+  &-menu {
+    display: none;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    background: #000;
+    padding-bottom: 40px;
+  }
+  &-nav {
+    height: 60px;
+    background-color: #171717;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    &__logo {
+      &-image {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        color: #FFFFFF;
+      }
+    }
+    &__btn {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding-top: 2px;
+      img {
+        width: 12.7px;
+        height: 12.7px;
+        padding-top: 1px;
+      }
+    }
+  }
+  &-language {
+    display: flex;
+    gap: 20px;
+    align-items: self-start;
+    &__item {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      color: #F8F8F8;
+      opacity: 0.7;
+      cursor: pointer;
+      transition: 0.2s;
+      &:hover {
+        color: #F1C82F;
+      }
+    }
+  }
+}
+.current {
+  opacity: 1;
+}
+
+.open {
+  display: block;
+}
+
+.mobile-items {
+  &__list {
+    padding-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+  }
+  &__item {
+    a {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 22px;
+      color: #FFFFFF;
+      transition: 0.2s;
+      &:hover {
+        color: #F1C82F;
+      }
+    }
+  }
+}
+
+.product {
+  background-color: #fff;
+  display: contents;
+  &-item {
+    padding-top: 21px;
+    &__image {
+      margin-inline: auto;
+      background-color: #F8F8F8;
+      border-radius: 4px;
+      width: 100%;
+      min-height: 168px;
+      display: flex;
+      &-picture{
+      margin-inline: auto;
+      }
+    }
+    &__description {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      color: #FFFFFF;
+      opacity: 0.7;
+      padding-top: 12px;
+    }
+  }
+}

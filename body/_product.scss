@@ -1,0 +1,19 @@
+@use "../mixins/media-mixin" as *;
+.product {
+  background-color: #fff;
+  &-image {
+    height: 775px;
+    background-image: url('/image/dia.svg');
+    background-repeat: no-repeat;
+    &__bg {
+      background-image: url('/image/card.svg');
+      height: 200px;
+      background-repeat: no-repeat;
+      &-picture {
+        background-image: url('/image/ledger.svg');
+        height: 200px;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}

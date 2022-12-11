@@ -1,0 +1,38 @@
+@use "../mixins/media-mixin" as *;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 100px;
+  padding-right: 100px;
+  position: relative;
+  @include lg {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+a {
+  text-decoration: none;
+}
+.wrapper {
+  min-height: 100vh;
+  padding-top: 20px;
+  background-color: #000;
+  background-image: url('/image/bg.svg');
+  background-repeat: no-repeat;
+  background-position: right top;
+
+  @include lg {
+    background-size: 350px;
+    padding-top: 20px;
+    background-image: url('/image/mobilebg.png');
+  }
+}

@@ -1,0 +1,27 @@
+@use "../mixins/media-mixin" as *;
+
+.footer {
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr 1fr;
+  padding-block: 146px;
+  background-color: #000;
+  &-company {
+    max-width: 153px;
+  }
+  &-product {
+    max-width: 191px;
+  }
+  &-nav {
+    max-width: 100px;
+  }
+  &-cookies {
+    max-width: 166px;
+  }
+}
+
+.hide {
+  display: none;
+}

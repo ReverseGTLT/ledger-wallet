@@ -33,6 +33,7 @@
     width: 200px;
     display: flex;
     gap: 30px;
+    position: relative;
     &__item {
       position: relative;
     }
@@ -44,8 +45,12 @@
       opacity: 0.7;
       position: relative;
       transition: 0.2s;
+      display: block;
       &:hover {
         color: #F1C82F;
+      }
+      &--after {
+        padding-right: 30px;
       }
     }
     &__hidden {
@@ -55,9 +60,8 @@
       position: absolute;
       top: 30px;
       background-color: #fff;
-      left: 144px;
+      left: -175px;
       border-radius: 10px;
-      z-index: 3;
       &::before {
         position: absolute;
         content: "";
@@ -65,7 +69,6 @@
         height: 10px;
         background-color: #fff;
         top: -6px;
-        left: 192px;
         transform: rotateZ(135deg)
       }
       &-item {
@@ -74,11 +77,15 @@
         background: #F8F8F8;
         border-radius: 8px;
         transition: 0.2s;
-        &:hover {
-          box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgb(0,0,0,0.22);
-        }
         a {
           display: block;
+          transition: 0.2s;
+        }
+        a:hover {
+          transform: scale(1.05);
+        }
+        a:hover .menu-list__hidden-description {
+          color: #F1C82F;
         }
       }
       &-image {
@@ -96,10 +103,9 @@
         font-weight: 500;
         font-size: 14px;
         line-height: 17px;
-        /* identical to box height */
-
-
         color: #000000;
+        padding-top: 16px;
+        transition: 0.2s;
       }
     }
   }
@@ -117,14 +123,14 @@
   transform: rotateZ(135deg);
   top: 2px;
   opacity: 0.3;
-  right: -25px;
+  right: 0;
 }
 
 .contact {
   &-list {
     display: flex;
     gap: 30px;
-
+    position: relative;
     &__link {
       font-weight: 500;
       font-size: 14px;
@@ -136,6 +142,9 @@
       &:hover {
         color: #F1C82F;
       }
+      &--after {
+        padding-right: 30px;
+      }
     }
 
     &__hidden {
@@ -145,10 +154,8 @@
       position: absolute;
       top: 30px;
       background-color: #fff;
-      right: 77px;
+      right: 6px;
       border-radius: 10px;
-      z-index: 3;
-
       &::before {
         position: absolute;
         content: "";
@@ -165,6 +172,10 @@
         line-height: 17px;
         color: #000000;
         opacity: 0.7;
+        transition: 0.2s;
+        &:hover {
+          opacity: 1;
+        }
       }
     }
   }

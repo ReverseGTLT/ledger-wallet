@@ -1,6 +1,23 @@
 @use "../mixins/media-mixin" as *;
 .product {
   background-color: #fff;
+  &-item {
+    &__image {
+      transition: 0.2s;
+    }
+    &__description {
+      transition: 0.2s;
+    }
+    a {
+      transition: 0.2s;
+    }
+    a:hover .product-item__description {
+      color: #F1C82F;
+    }
+    a:hover .product-item__image {
+      transform: scale(1.05);
+    }
+  }
   &-image {
     height: 775px;
     background-image: url('/image/dia.svg');

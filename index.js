@@ -10,9 +10,12 @@ const footer = document.querySelector('.footer');
 
 //Opening Pakiet drop menu
 function toggleMenu(){
-    menuListHidden.classList.toggle('visible')
+    menuListHidden.classList.add('visible')
 }
-menuListLinkAfter.addEventListener('click', function (e) {
+function removeMenu(){
+    menuListHidden.classList.remove('visible')
+}
+menuListLinkAfter.addEventListener('mouseenter', function (e) {
     e.stopPropagation();
     toggleMenu();
 })
@@ -23,16 +26,18 @@ document.addEventListener('click', function (e){
     let itsHamburger = target === menuListLinkAfter;
     let menuIsActive = menuListHidden.classList.contains('visible');
     if (!itsMenu && !itsHamburger && menuIsActive) {
-        toggleMenu()
+        removeMenu()
     }
 })
 
-
 //Opening language drop menu
 function toggleContact(){
-    contactListHidden.classList.toggle('visible-language')
+    contactListHidden.classList.add('visible-language')
 }
-contactListLinkAfter.addEventListener('click', function (e) {
+function removeContact(){
+    contactListHidden.classList.remove('visible-language')
+}
+contactListLinkAfter.addEventListener('mouseenter', function (e) {
     e.stopPropagation();
     toggleContact();
 })
@@ -43,7 +48,7 @@ document.addEventListener('click', function (e){
     let itsHamburger = target === contactListLinkAfter;
     let menuIsActive = contactListHidden.classList.contains('visible-language');
     if (!itsMenu && !itsHamburger && menuIsActive) {
-        toggleContact()
+        removeContact()
     }
 })
 

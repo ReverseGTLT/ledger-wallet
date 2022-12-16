@@ -29,7 +29,6 @@ a {
 
 .wrapper {
   min-height: 100vh;
-  padding-top: 20px;
   background-color: #000;
   background-image: url("/image/bg.svg");
   background-repeat: no-repeat;
@@ -213,11 +212,18 @@ a {
 .menu-list {
   width: 200px;
   display: flex;
-  gap: 30px;
+  gap: 10px;
   position: relative;
 }
 .menu-list__item {
   position: relative;
+  padding-block: 20px;
+}
+.menu-list__item:hover .menu-list__link--after {
+  color: #F1C82F;
+}
+.menu-list__item--after {
+  padding-inline: 30px;
 }
 .menu-list__link {
   font-weight: 500;
@@ -232,17 +238,14 @@ a {
 .menu-list__link:hover {
   color: #F1C82F;
 }
-.menu-list__link--after {
-  padding-right: 30px;
-}
 .menu-list__hidden {
   display: none;
   width: 384px;
   height: 237px;
   position: absolute;
-  top: 30px;
+  top: 50px;
   background-color: #fff;
-  left: -175px;
+  left: -135px;
   border-radius: 10px;
 }
 .menu-list__hidden::before {
@@ -302,13 +305,28 @@ a {
   transform: rotateZ(135deg);
   top: 2px;
   opacity: 0.3;
-  right: 0;
+  right: -30px;
+}
+
+.menu-list__item:hover .menu-list__link--after::after {
+  border-top: 2px solid #F1C82F;
+  border-right: 2px solid #F1C82F;
 }
 
 .contact-list {
   display: flex;
-  gap: 30px;
+  gap: 10px;
   position: relative;
+}
+.contact-list__item {
+  padding-block: 20px;
+  position: relative;
+}
+.contact-list__item--after {
+  padding-inline: 30px;
+}
+.contact-list__item--after:hover .contact-list__link--after {
+  color: #F1C82F;
 }
 .contact-list__link {
   font-weight: 500;
@@ -322,15 +340,12 @@ a {
 .contact-list__link:hover {
   color: #F1C82F;
 }
-.contact-list__link--after {
-  padding-right: 30px;
-}
 .contact-list__hidden {
   display: none;
   width: 78px;
   height: 105px;
   position: absolute;
-  top: 30px;
+  top: 50px;
   background-color: #fff;
   right: 6px;
   border-radius: 10px;
@@ -352,9 +367,16 @@ a {
   color: #000000;
   opacity: 0.7;
   transition: 0.2s;
+  padding-inline: 20px;
 }
 .contact-list__hidden-link:hover {
   opacity: 1;
+  font-size: 15px;
+}
+
+.contact-list__item:hover .contact-list__link--after::after {
+  border-top: 2px solid #F1C82F;
+  border-right: 2px solid #F1C82F;
 }
 
 .visible {

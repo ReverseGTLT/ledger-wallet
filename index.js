@@ -1,6 +1,6 @@
 const menuListHidden = document.querySelector('.menu-list__hidden');
-const menuListLinkAfter = document.querySelector('.menu-list__link--after');
-const contactListLinkAfter = document.querySelector('.contact-list__link--after');
+const menuListItem = document.querySelector('.menu-list__item--after');
+const contactListItem = document.querySelector('.contact-list__item--after');
 const contactListHidden = document.querySelector('.contact-list__hidden');
 const burgerBtn = document.querySelector('.burger');
 const mobileMenu = document.querySelector('.mobile-menu');
@@ -15,19 +15,11 @@ function toggleMenu(){
 function removeMenu(){
     menuListHidden.classList.remove('visible')
 }
-menuListLinkAfter.addEventListener('mouseenter', function (e) {
-    e.stopPropagation();
+menuListItem.addEventListener('mouseenter', function (e) {
     toggleMenu();
 })
-
-document.addEventListener('click', function (e){
-    let target = e.target;
-    let itsMenu = target === menuListHidden || menuListHidden.contains(target);
-    let itsHamburger = target === menuListLinkAfter;
-    let menuIsActive = menuListHidden.classList.contains('visible');
-    if (!itsMenu && !itsHamburger && menuIsActive) {
-        removeMenu()
-    }
+menuListItem.addEventListener('mouseleave', function (e) {
+    removeMenu();
 })
 
 //Opening language drop menu
@@ -37,19 +29,13 @@ function toggleContact(){
 function removeContact(){
     contactListHidden.classList.remove('visible-language')
 }
-contactListLinkAfter.addEventListener('mouseenter', function (e) {
-    e.stopPropagation();
+contactListItem.addEventListener('mouseenter', function (e) {
+    console.log('language enter')
     toggleContact();
 })
 
-document.addEventListener('click', function (e){
-    let target = e.target;
-    let itsMenu = target === contactListHidden || contactListHidden.contains(target);
-    let itsHamburger = target === contactListLinkAfter;
-    let menuIsActive = contactListHidden.classList.contains('visible-language');
-    if (!itsMenu && !itsHamburger && menuIsActive) {
-        removeContact()
-    }
+contactListItem.addEventListener('mouseleave', function (e) {
+    removeContact();
 })
 
 //Opening burger menu

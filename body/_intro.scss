@@ -1,4 +1,9 @@
 @use "../mixins/media-mixin" as *;
+
+.main {
+  max-width: 1440px;
+  margin-inline: auto;
+}
 .intro {
   &-title {
     font-weight: 800;
@@ -83,7 +88,7 @@
       &-image {
         width: 17px;
         height: 12px;
-        background-image: url('/image/Vector.png');
+        background-image: url('image/Vector.png');
       }
 
       &-description {

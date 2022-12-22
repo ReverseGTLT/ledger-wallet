@@ -9,29 +9,28 @@ const main = document.querySelector('.main');
 const footer = document.querySelector('.footer');
 
 //Opening Pakiet drop menu
-function toggleMenu(){
+function addMenu(){
     menuListHidden.classList.add('visible')
 }
 function removeMenu(){
     menuListHidden.classList.remove('visible')
 }
 menuListItem.addEventListener('mouseenter', function (e) {
-    toggleMenu();
+    addMenu();
 })
 menuListItem.addEventListener('mouseleave', function (e) {
     removeMenu();
 })
 
 //Opening language drop menu
-function toggleContact(){
+function addContact(){
     contactListHidden.classList.add('visible-language')
 }
 function removeContact(){
     contactListHidden.classList.remove('visible-language')
 }
 contactListItem.addEventListener('mouseenter', function (e) {
-    console.log('language enter')
-    toggleContact();
+    addContact();
 })
 
 contactListItem.addEventListener('mouseleave', function (e) {

@@ -1,6 +1,33 @@
 @use "../mixins/media-mixin" as *;
 .product {
   background-color: #fff;
+  &-title {
+    margin-inline: auto;
+    text-align: center;
+    padding-top: 140px;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 59px;
+    color: #000000;
+    padding-bottom: 60px;
+    @include lg {
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+      padding-bottom: 20px;
+      padding-top: 64px;
+    }
+  }
+  &-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 145px;
+    @include lg {
+      grid-template-columns: 1fr;
+      gap: 30px;
+      padding-bottom: 80px;
+    }
+  }
   &-item {
     &__image {
       transition: 0.2s;
@@ -19,18 +46,95 @@
     }
   }
   &-image {
-    height: 775px;
-    background-image: url('/image/dia.svg');
-    background-repeat: no-repeat;
-    &__bg {
-      background-image: url('/image/card.svg');
-      height: 200px;
-      background-repeat: no-repeat;
-      &-picture {
-        background-image: url('/image/ledger.svg');
-        height: 200px;
-        background-repeat: no-repeat;
+    padding-left: 20px;
+    &--order {
+      margin-top: 40px;
+      order: 1;
+      @include lg {
+        order: 0;
+      }
+    }
+    &__picture {
+      width: 100%;
+    }
+  }
+  &-info {
+    padding-inline: 100px;
+    &__title {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      padding-bottom: 40px;
+    }
+    &__description {
+      opacity: 0.7;
+      max-width: 488px;
+    }
+    &__subtitle {
+      padding-bottom: 20px;
+      padding-top: 20px;
+      font-weight: 600;
+      color: #000000;
+    }
+    &__footnote {
+      display: flex;
+      gap: 14px;
+      padding-bottom: 10px;
+      &-text {
+        opacity: 0.7;
+      }
+    }
+    &__btn {
+      width: 237px;
+      height: 55px;
+      background-color: #fff;
+      border: 1px solid #F1C82F;
+      font-size: 16px;
+      line-height: 32px;
+      margin-top: 40px;
+      margin-bottom: 50px;
+      display: block;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    &__price {
+      font-weight: 700;
+      font-size: 24px;
+      padding-bottom: 25px;
+    }
+    &__box {
+      display: flex;
+      gap: 28px;
+      &-btn {
+        width: 153px;
+        height: 56px;
+        background-color: #F1C82F;
+        border-radius: 4px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        border: #F1C82F;
+        transition: 0.2s;
+        cursor: pointer;
+        &--white-btn {
+          background: #D6D6D640;
+          width: 176px;
+        }
       }
     }
   }
+}
+
+.product-info__box-btn:hover {
+  border: 1px solid #F1C82F;
+  background-color: #fff;
+}
+.product-info__box-btn--white-btn:hover {
+  background-color: #000;
+  color: white;
+  border: 1px solid #000;
+}
+.product-info__btn:hover{
+  font-size: 17px;
+  border: 2px solid #F1C82F;
 }

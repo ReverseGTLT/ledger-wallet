@@ -3,22 +3,77 @@
 .footer {
   font-size: 16px;
   line-height: 20px;
-  color: #FFFFFF;
   display: grid;
+  color: white;
   grid-template-columns: 3fr 2fr 1fr 1fr;
   padding-block: 146px;
   background-color: #000;
+  align-items: baseline;
+  @include lg {
+    grid-template-columns: 1fr 1.1fr;
+    grid-template-areas: "a a" "b b" "c d";
+    row-gap: 60px;
+    padding-block: 65px;
+  }
   &-company {
     max-width: 153px;
+    @include lg {
+      grid-area: a;
+    }
+    &__title {
+      max-width: 112px;
+    }
+    &__description {
+      padding-top: 15px;
+    }
   }
   &-product {
     max-width: 191px;
+    @include lg {
+      grid-area: b;
+    }
+    &__item {
+      padding-top: 15px;
+      &-link {
+        color: #FFFFFF;
+        transition: 0.2s;
+        &:hover {
+          color: #F1C82F;
+        }
+      }
+    }
   }
   &-nav {
     max-width: 100px;
+    @include lg {
+      grid-area: c;
+    }
+    &__item {
+      padding-top: 15px;
+      &-link {
+        color: #FFFFFF;
+        transition: 0.2s;
+        &:hover {
+          color: #F1C82F;
+        }
+      }
+    }
   }
   &-cookies {
     max-width: 166px;
+    @include lg {
+      grid-area: d;
+    }
+    &__item {
+      padding-top: 15px;
+      &-link {
+        color: #FFFFFF;
+        transition: 0.2s;
+        &:hover {
+          color: #F1C82F;
+        }
+      }
+    }
   }
 }
 

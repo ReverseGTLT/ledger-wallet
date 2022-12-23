@@ -1,7 +1,7 @@
 @use "../mixins/media-mixin" as *;
 .burger {
   width: 18px;
-  height: 20px;
+  height: 24px;
   position: relative;
   cursor: pointer;
   @include lg-min {
@@ -43,13 +43,14 @@
     background-color: #171717;
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
+    padding-top: 22px;
     &__logo {
       &-image {
         font-weight: 700;
         font-size: 16px;
         line-height: 20px;
         color: #FFFFFF;
+        display: block;
       }
     }
     &__btn {

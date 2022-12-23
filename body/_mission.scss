@@ -1,0 +1,41 @@
+@use "../mixins/media-mixin" as *;
+
+.mission {
+  margin-inline: auto;
+  &-image {
+    max-width: 500px;
+    margin-inline: auto;
+    &__picture{
+      width: 100%;
+      text-align: center;
+    }
+  }
+  &-info {
+    &__title {
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 59px;
+      text-align: center;
+      padding-top: 20px;
+      @include lg {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+    &__description {
+      opacity: 0.7;
+      text-align: center;
+      max-width: 790px;
+      padding-top: 33px;
+      margin-inline: auto;
+      padding-bottom: 130px;
+      @include lg {
+        font-size: 14px;
+        line-height: 21px;
+        padding-top: 18px;
+        padding-bottom: 70px;
+      }
+    }
+  }
+}

@@ -47,11 +47,19 @@
   }
   &-image {
     padding-left: 20px;
+    @include sm {
+      width: 345px;
+      margin-inline: auto;
+    }
     &--order {
       margin-top: 40px;
       order: 1;
       @include lg {
         order: 0;
+      }
+      @include sm {
+        width: 345px;
+        margin-inline: auto;
       }
     }
     &__picture {
@@ -60,6 +68,9 @@
   }
   &-info {
     padding-inline: 100px;
+    @include lg {
+      padding-inline: 15px;
+    }
     &__title {
       font-weight: 600;
       font-size: 24px;
@@ -105,6 +116,10 @@
     &__box {
       display: flex;
       gap: 28px;
+      @include lg {
+        gap: 15px;
+        justify-content: center;
+      }
       &-btn {
         width: 153px;
         height: 56px;
@@ -116,9 +131,15 @@
         border: #F1C82F;
         transition: 0.2s;
         cursor: pointer;
+        @include lg {
+          width: 150px;
+        }
         &--white-btn {
           background: #D6D6D640;
           width: 176px;
+          @include lg {
+            width: 150px;
+          }
         }
       }
     }
@@ -128,11 +149,13 @@
 .product-info__box-btn:hover {
   border: 1px solid #F1C82F;
   background-color: #fff;
+  font-size: 18px;
 }
 .product-info__box-btn--white-btn:hover {
   background-color: #000;
   color: white;
   border: 1px solid #000;
+  font-size: 18px;
 }
 .product-info__btn:hover{
   font-size: 17px;

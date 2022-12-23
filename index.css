@@ -579,7 +579,7 @@ a {
 .product-image {
   padding-left: 20px;
 }
-@media (max-width: 575.8px) {
+@media (max-width: 991.8px) {
   .product-image {
     width: 345px;
     margin-inline: auto;
@@ -594,7 +594,7 @@ a {
     order: 0;
   }
 }
-@media (max-width: 575.8px) {
+@media (max-width: 991.8px) {
   .product-image--order {
     width: 345px;
     margin-inline: auto;

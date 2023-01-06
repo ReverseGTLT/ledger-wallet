@@ -1,0 +1,97 @@
+@use "../mixins/media-mixin" as *;
+
+.header--junior-ladger {
+  background-color: #000;
+  height: 76px;
+  @include lg {
+    height: 60px;
+  }
+}
+
+.box--junior-ladger {
+  @include lg {
+    padding-top: 20px;
+  }
+}
+
+.menu {
+  &-list {
+    &__item {
+      &--after {
+        &:hover .menu-list__link--after-junior {
+          color: #fff;
+        }
+      }
+    }
+    &__link--junior {
+      color: #F1C82F;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      opacity: 0.7;
+      transition: 0.2s;
+      &:hover {
+        color: #fff;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.contact {
+  &-list {
+    &__item {
+      &--after {
+        &:hover .contact-list__link--after-junior {
+          color: #fff;
+        }
+      }
+    }
+    &__link--junior {
+      color: #F1C82F;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      opacity: 0.7;
+      transition: 0.2s;
+      &:hover {
+        color: #fff;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+.menu-list__link--after-junior::after,
+.contact-list__link--after-junior::after {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #E6E6E6;
+  border-right: 2px solid #E6E6E6;
+  transform: rotateZ(135deg);
+  top: 28px;
+  opacity: 1;
+  right: 0;
+}
+
+.menu-list__item:hover .menu-list__link--after-junior::after {
+  border-top: 2px solid #F1C82F;
+  border-right: 2px solid #F1C82F;
+}
+
+.contact-list__item:hover .contact-list__link--after-junior::after {
+  border-top: 2px solid #F1C82F;
+  border-right: 2px solid #F1C82F;
+}
+
+.menu-list__hidden--junior {
+  top: 60px;
+}
+
+.slick-track {
+  display: flex;
+  gap: 20px;
+}

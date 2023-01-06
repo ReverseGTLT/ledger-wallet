@@ -1,0 +1,207 @@
+@use "../mixins/media-mixin" as *;
+
+.junior {
+  &--info {
+    max-width: 400px;
+    @include lg {
+      max-width: 100%;
+      padding-top: 26px;
+    }
+  }
+  &-title {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 59px;
+    text-align: center;
+    padding-block: 80px;
+  }
+  &-information {
+    border-top: 1px solid #b6b6b6;
+    border-bottom: 1px solid #b6b6b6;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 44px;
+    @include lg {
+      grid-template-columns: 1fr;
+      margin-bottom: 30px;
+    }
+    &__title {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 32px;
+      opacity: 0.7;
+      padding-block: 42px;
+      @include lg {
+        padding-block: 25px;
+      }
+    }
+    &__description {
+      opacity: 0.7;
+      font-weight: 600;
+      line-height: 22px;
+      padding-bottom: 10px;
+      max-width: 210px;
+    }
+    &__technic {
+      border-right: 1px solid #b6b6b6;
+      @include lg {
+        border-right: none;
+        border-bottom: 1px solid #b6b6b6;
+      }
+    }
+    &__box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-bottom: 42px;
+    }
+    &__item {
+      display: flex;
+      gap: 16px;
+      padding-bottom: 35px;
+      &-description {
+        max-width: 440px;
+        opacity: 0.7;
+      }
+    }
+    &__product {
+      padding-left: 54px;
+      line-height: 32px;
+      @include lg {
+        padding-left: 0;
+      }
+    }
+  }
+  &-delivery {
+    &__title {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      opacity: 0.7;
+      padding-bottom: 35px;
+    }
+    &__description {
+      line-height: 32px;
+      opacity: 0.7;
+    }
+    &__box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 175px;
+      @include lg {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+      }
+    }
+    &__image {
+      margin-top: 50px;
+      margin-bottom: 100px;
+      height: 582px;
+      border-radius: 5px;
+      padding-top: 74px;
+      padding-inline: 90px;
+      background-image: url('../image/junior-product.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      @include lg {
+        background-image: url('../image/junior-product-mobile.png');
+        margin-top: 20px;
+        margin-bottom: 32px;
+        height: 556px;
+        padding-top: 0;
+        padding-inline: 0;
+      }
+      &-title {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 59px;
+        max-width: 400px;
+        @include lg {
+          font-size: 24px;
+          line-height: 29px;
+          text-align: center;
+          padding-top: 30px;
+          max-width: 167px;
+        }
+      }
+      &-btns {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        @include lg {
+          padding-top: 375px;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+.product-info__box--junior {
+  @include lg {
+    display: block;
+  }
+}
+
+.product-info__box-btn--junior {
+  @include lg {
+    width: 100%;
+  }
+}
+
+.wallet {
+  &-links {
+    display: flex;
+    gap: 24px;
+    padding-block: 50px;
+    @include lg {
+      justify-content: center;
+    }
+    &__item {
+      &-link {}
+      &-btn {
+        background: #833323;
+        border-radius: 4px;
+        width: 171px;
+        height: 56px;
+        border: none;
+        line-height: 20px;
+        font-weight: 700;
+        color: #FFFFFF;
+        cursor: pointer;
+        transition: 0.2s;
+        font-size: 16px;
+        @include lg {
+          width: 164px;
+        }
+        &:hover {
+          border: 1px solid #F1C82F;
+          background: #fff;
+          font-size: 18px;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+.btn-white {
+  background: #D6D6D6;
+  color: #000000;
+}
+
+.junior-information__description:nth-child(even) {
+  font-weight: 400;
+  max-width: 260px;
+}
+
+.product-info__price--delivery {
+  padding-bottom: 0;
+}
+
+.product-info__box-btn--product {
+  @include lg {
+    width: 144px;
+  }
+}

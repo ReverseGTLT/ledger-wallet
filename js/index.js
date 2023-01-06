@@ -9,51 +9,43 @@ const main = document.querySelector('.main');
 const footer = document.querySelector('.footer');
 
 //Opening Pakiet drop menu
+
+menuListItem.addEventListener('mouseenter', addMenu);
+menuListItem.addEventListener('mouseleave', removeMenu);
 function addMenu(){
     menuListHidden.classList.add('visible')
 }
 function removeMenu(){
     menuListHidden.classList.remove('visible')
 }
-menuListItem.addEventListener('mouseenter', function (e) {
-    addMenu();
-})
-menuListItem.addEventListener('mouseleave', function (e) {
-    removeMenu();
-})
-
 //Opening language drop menu
+
+contactListItem.addEventListener('mouseenter', addContact);
+
+contactListItem.addEventListener('mouseleave', removeContact);
 function addContact(){
     contactListHidden.classList.add('visible-language')
 }
 function removeContact(){
     contactListHidden.classList.remove('visible-language')
 }
-contactListItem.addEventListener('mouseenter', function (e) {
-    addContact();
-})
-
-contactListItem.addEventListener('mouseleave', function (e) {
-    removeContact();
-})
-
 //Opening burger menu
+
+burgerBtn.addEventListener('click', openBurgerMenu);
 function openBurgerMenu(){
     mobileMenu.classList.remove('invisible')
     mobileMenu.classList.add('open');
     main.classList.add('invisible');
     footer.classList.add('hide');
 }
-burgerBtn.addEventListener('click', () => {
-    openBurgerMenu();
-})
 
 //Close burger menu
+
+burgerClose.addEventListener('click', closeBurgerMenu);
 function closeBurgerMenu(){
     mobileMenu.classList.remove('open')
     mobileMenu.classList.add('invisible');
     main.classList.remove('invisible');
+    footer.classList.remove('hide');
 }
-burgerClose.addEventListener('click', () => {
-    closeBurgerMenu();
-})
+

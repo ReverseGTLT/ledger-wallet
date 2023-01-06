@@ -1115,13 +1115,13 @@ a {
   border-radius: 5px;
   padding-top: 74px;
   padding-inline: 90px;
-  background-image: url("../image/junior-product.png");
+  background-image: url("image/junior-product.png");
   background-repeat: no-repeat;
   background-position: center;
 }
 @media (max-width: 991.8px) {
   .junior-delivery__image {
-    background-image: url("../image/junior-product-mobile.png");
+    background-image: url("image/junior-product-mobile.png");
     margin-top: 20px;
     margin-bottom: 32px;
     height: 556px;

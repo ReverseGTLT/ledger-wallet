@@ -252,3 +252,10 @@
 .product-bitcoin .junior-information__item {
   align-items: baseline;
 }
+
+.advanced-image {
+  background-image: url('image/junior/advanseddesk.png');
+  @include md {
+    background-image: url('image/junior/advansedmobile.png');
+  }
+}

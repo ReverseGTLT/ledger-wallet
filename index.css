@@ -1278,4 +1278,13 @@ a {
   align-items: baseline;
 }
 
+.advanced-image {
+  background-image: url("image/junior/advanseddesk.png");
+}
+@media (max-width: 767.8px) {
+  .advanced-image {
+    background-image: url("image/junior/advansedmobile.png");
+  }
+}
+
 /*# sourceMappingURL=index.css.map */

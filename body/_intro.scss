@@ -12,7 +12,7 @@
     color: #FFFFFF;
     max-width: 650px;
     padding-top: 50px;
-    @include lg {
+    @include md {
       font-size: 24px;
       line-height: 36px;
       max-width: 350px;
@@ -31,7 +31,7 @@
     padding-top: 30px;
     max-width: 380px;
     padding-bottom: 40px;
-    @include lg {
+    @include md {
       font-size: 18px;
       line-height: 27px;
       text-align: center;
@@ -48,7 +48,7 @@
     width: 201px;
     height: 56px;
     transition: 0.2s;
-    @include lg {
+    @include md {
       width: 229px;
       margin: 0 auto;
     }
@@ -78,7 +78,7 @@
     gap: 27px;
     padding-top: 86px;
     padding-bottom: 67px;
-    @include lg {
+    @include md {
       flex-direction: column;
       gap: 17px;
     }
@@ -98,7 +98,7 @@
         color: #FFFFFF;
         opacity: 0.7;
         max-width: 145px;
-        @include lg {
+        @include md {
           max-width: 100%;
         }
       }

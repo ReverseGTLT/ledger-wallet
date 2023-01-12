@@ -3,7 +3,7 @@
 .junior {
   &--info {
     max-width: 400px;
-    @include lg {
+    @include md {
       max-width: 100%;
       padding-top: 26px;
     }
@@ -21,7 +21,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 44px;
-    @include lg {
+    @include md {
       grid-template-columns: 1fr;
       margin-bottom: 30px;
     }
@@ -31,7 +31,7 @@
       line-height: 32px;
       opacity: 0.7;
       padding-block: 42px;
-      @include lg {
+      @include md {
         padding-block: 25px;
       }
     }
@@ -44,7 +44,7 @@
     }
     &__technic {
       border-right: 1px solid #b6b6b6;
-      @include lg {
+      @include md {
         border-right: none;
         border-bottom: 1px solid #b6b6b6;
       }
@@ -66,7 +66,7 @@
     &__product {
       padding-left: 54px;
       line-height: 32px;
-      @include lg {
+      @include md {
         padding-left: 0;
       }
     }
@@ -88,7 +88,7 @@
       justify-content: space-between;
       align-items: center;
       padding-top: 175px;
-      @include lg {
+      @include md {
         flex-direction: column;
         align-items: center;
         padding-top: 0;
@@ -104,7 +104,7 @@
       background-image: url('image/junior-product.png');
       background-repeat: no-repeat;
       background-position: center;
-      @include lg {
+      @include md {
         background-image: url('image/junior-product-mobile.png');
         margin-top: 20px;
         margin-bottom: 32px;
@@ -117,7 +117,7 @@
         font-size: 48px;
         line-height: 59px;
         max-width: 400px;
-        @include lg {
+        @include md {
           font-size: 24px;
           line-height: 29px;
           text-align: center;
@@ -129,7 +129,7 @@
         display: flex;
         gap: 50px;
         align-items: center;
-        @include lg {
+        @include md {
           padding-top: 375px;
           align-items: center;
         }
@@ -139,13 +139,13 @@
 }
 
 .product-info__box--junior {
-  @include lg {
+  @include md {
     display: block;
   }
 }
 
 .product-info__box-btn--junior {
-  @include lg {
+  @include md {
     width: 100%;
   }
 }
@@ -155,24 +155,23 @@
     display: flex;
     gap: 24px;
     padding-block: 50px;
-    @include lg {
+    @include md {
       justify-content: center;
     }
     &__item {
       &-link {}
       &-btn {
-        background: #833323;
         border-radius: 4px;
-        width: 171px;
         height: 56px;
+        background: #D6D6D6;
         border: none;
-        line-height: 20px;
-        font-weight: 700;
-        color: #FFFFFF;
+        width: 171px;
         cursor: pointer;
         transition: 0.2s;
         font-size: 16px;
-        @include lg {
+        line-height: 20px;
+        font-weight: 700;
+        @include md {
           width: 164px;
         }
         &:hover {
@@ -186,9 +185,25 @@
   }
 }
 
-.btn-white {
-  background: #D6D6D6;
-  color: #000000;
+.btn-long {
+  width: 200px;
+  @include md {
+    width: 164px;
+  }
+}
+
+.active-wallet {
+  background: #833323;
+  color: #FFFFFF;
+  @include md {
+    width: 164px;
+  }
+  &:hover {
+    border: 1px solid #F1C82F;
+    background: #fff;
+    font-size: 18px;
+    color: black;
+  }
 }
 
 .junior-information__description:nth-child(even) {
@@ -201,7 +216,39 @@
 }
 
 .product-info__box-btn--product {
-  @include lg {
+  @include md {
     width: 144px;
   }
+}
+
+.display-none {
+  //display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.product-bitcoin .junior-information__point {
+  background-color: #833323;
+  min-width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-bitcoin .junior-information__item {
+  align-items: baseline;
 }

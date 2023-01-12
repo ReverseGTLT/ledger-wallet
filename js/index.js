@@ -49,3 +49,21 @@ function closeBurgerMenu(){
     footer.classList.remove('hide');
 }
 
+const $juniorWalletBtn = $('.wallet-links__item-btn');
+
+$juniorWalletBtn.on('click', onWalletClickBtn);
+function onWalletClickBtn(e) {
+    e.preventDefault();
+    $juniorWalletBtn.removeClass('active-wallet');
+    e.target.classList.add('active-wallet');
+    const btnId = e.target.id;
+    const $bitcoin = $('.junior-information--bitcoin');
+    const $juniorInformation = $('.junior-information');
+    if (btnId === 'juniorWalletNano') {
+        $juniorInformation.removeClass('display-none');
+        $bitcoin.addClass('display-none');
+    } else if (btnId === 'juniorWalletBitcoin') {
+        $juniorInformation.addClass('display-none');
+        $bitcoin.removeClass('display-none');
+    }
+}

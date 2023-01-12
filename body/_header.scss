@@ -7,7 +7,7 @@ a {
 .box {
   display: flex;
   align-items: center;
-  @include lg {
+  @include md {
     justify-content: space-between;
   }
 }
@@ -17,7 +17,7 @@ a {
   flex-grow: 1;
   justify-content: space-between;
   align-items: center;
-  @include lg {
+  @include md {
     display: none;
   }
 }

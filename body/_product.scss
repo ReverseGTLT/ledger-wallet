@@ -10,7 +10,7 @@
     line-height: 59px;
     color: #000000;
     padding-bottom: 60px;
-    @include lg {
+    @include md {
       font-size: 24px;
       line-height: 29px;
       text-align: center;
@@ -22,7 +22,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-bottom: 145px;
-    @include lg {
+    @include md {
       grid-template-columns: 1fr;
       gap: 30px;
       padding-bottom: 80px;
@@ -47,17 +47,17 @@
   }
   &-image {
     padding-left: 20px;
-    @include lg {
+    @include md {
       width: 345px;
       margin-inline: auto;
     }
     &--order {
       margin-top: 40px;
       order: 1;
-      @include lg {
+      @include md {
         order: 0;
       }
-      @include lg {
+      @include md {
         width: 345px;
         margin-inline: auto;
       }
@@ -68,7 +68,7 @@
   }
   &-info {
     padding-inline: 100px;
-    @include lg {
+    @include md {
       padding-inline: 15px;
     }
     &__title {
@@ -116,7 +116,7 @@
     &__box {
       display: flex;
       gap: 28px;
-      @include lg {
+      @include md {
         gap: 15px;
         justify-content: center;
       }
@@ -131,13 +131,13 @@
         border: #F1C82F;
         transition: 0.2s;
         cursor: pointer;
-        @include lg {
+        @include md {
           width: 150px;
         }
         &--white-btn {
           background: #D6D6D640;
           width: 176px;
-          @include lg {
+          @include md {
             width: 150px;
           }
         }

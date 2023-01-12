@@ -11,6 +11,7 @@
   <meta name="format-detection" content="email=no">
   <link rel="stylesheet" href="../normalize.css">
   <link rel="stylesheet" href="../index.css">
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <title>Document</title>
 </head>
 <body>
@@ -157,18 +158,16 @@
 
       <div class="wallet-links">
         <div class="wallet-links__item">
-          <a href="" class="wallet-links__item-link">
-            <button class="wallet-links__item-btn">Ledger Nano X</button>
-          </a>
+          <button id="juniorWalletNano"
+                  class="wallet-links__item-btn active-wallet">Ledger Nano X</button>
         </div>
         <div class="wallet-links__item">
-          <a href="" class="wallet-links__item-link">
-            <button class="wallet-links__item-btn btn-white">Ballet Real Bitcoin</button>
-          </a>
+          <button id="juniorWalletBitcoin"
+                  class="wallet-links__item-btn btn-long">Ballet Real Bitcoin</button>
         </div>
       </div>
 
-      <div class="junior-information">
+      <div class="junior-information" data-id="juniorWalletNano">
         <div class="junior-information__technic">
           <h3 class="junior-information__title">Szczegóły techniczne</h3>
           <div class="junior-information__box">
@@ -241,6 +240,75 @@
           </div>
         </div>
       </div>
+      <div class="junior-information junior-information--bitcoin display-none" data-id="juniorWalletBitcoin">
+        <div class="junior-information__technic">
+          <h3 class="junior-information__title">Szczegóły techniczne</h3>
+          <div class="junior-information__box">
+            <p class="junior-information__description">Marka:</p>
+            <p class="junior-information__description">Balet</p>
+            <p class="junior-information__description">Producent:</p>
+            <p class="junior-information__description">Balet</p>
+            <p class="junior-information__description">Numer części:</p>
+            <p class="junior-information__description">100</p>
+            <p class="junior-information__description">Web Browser Included:</p>
+            <p class="junior-information__description">Nie</p>
+            <p class="junior-information__description">Ekran kolorowy:</p>
+            <p class="junior-information__description">Nie</p>
+            <p class="junior-information__description">Baterie w zestawie:</p>
+            <p class="junior-information__description">Nie</p>
+            <p class="junior-information__description">Wymagane baterie:</p>
+            <p class="junior-information__description">Nie</p>
+            <p class="junior-information__description">Autofokus:</p>
+            <p class="junior-information__description">Nie</p>
+            <p class="junior-information__description">Includes Rechargable Battery:</p>
+            <p class="junior-information__description">Nie</p>
+            <p class="junior-information__description">Programowalne przyciski :</p>
+            <p class="junior-information__description">Nie</p>
+            <p class="junior-information__description">Identyfikator referencyjny producenta:</p>
+            <p class="junior-information__description">100</p>
+            <p class="junior-information__description">Wymiary produktu:</p>
+            <p class="junior-information__description">‎8.56 x 0.12 x 5.4 cm; 38.6 gr</p>
+            <p class="junior-information__description">ASIN:</p>
+            <p class="junior-information__description">‎B07YL1R8QX</p>
+          </div>
+        </div>
+
+        <div class="junior-information__product product-bitcoin">
+          <h3 class="junior-information__title">Informacje o tym produkcie</h3>
+          <div class="junior-information__item">
+            <div class="junior-information__point">
+              1
+            </div>
+            <p class="junior-information__item-description">Dzięki naszym innowacyjnym portfelom Ballet każdy nowy użytkownik może korzystać z kryptowalut prosto i stylowo. Pozwalają na otrzymywanie, przechowywanie, przesyłanie, kupowanie i sprzedawanie kryptowalut. To najłatwiejsze w obsłudze produkty tego typu: Już po rozpakowaniu są gotowe do użycia, bez zakładania kont, konfiguracji, haseł ani elektroniki, a środki znajdują się w pamięci Cold Storage, całkowicie odcięte od sieci, przez co są zabezpieczone przed hakerami.</p>
+          </div>
+          <div class="junior-information__item">
+            <div class="junior-information__point">
+              2
+            </div>
+            <p class="junior-information__item-description">Zero konfiguracji: Nasze portfele są gotowe do użycia już po rozpakowaniu. Zero konserwacji: Nasze portfele to fizyczny produkt z nierdzewnej stali, przez co w odróżnieniu od portfeli sprzętowych nie wymagają konserwacji ani aktualizacji. To wspaniały prezent: W swoim założeniu stanowią fizyczną formę kryptowaluty i po ich zasileniu są fizycznym nośnikiem wartości, jak złoto czy gotówka. Dzięki temu idealnie nadają się na prezent i do zapoznawania nowicjuszy z technologiami krypto.</p>
+          </div>
+          <div class="junior-information__item">
+            <div class="junior-information__point">
+              3
+            </div>
+            <p class="junior-information__item-description">mu idealnie nadają się na prezent i do zapoznawania nowicjuszy z technologiami krypto.
+              3. Nabywanie kryptowalut: Korzystając z karty kredytowej lub debetowej, można z łatwością kupować kryptowaluty, a te automatycznie trafią do portfela Ballet użytkownika. Prywatne klucze użytkownika: Decentralizacja portfeli oznacza, że tylko użytkownicy końcowi mają kontrolę nad swoimi kluczami prywatnymi i środkami cyfrowymi. Nasze portfele korzystają ze sprawdzonych algorytmów szyfrowania i deszyfrowania oraz z otwartego oprogramowania, gwarantując bezpieczeństwo zgromadzonych środków.</p>
+          </div>
+          <div class="junior-information__item">
+            <div class="junior-information__point">
+              4
+            </div>
+            <p class="junior-information__item-description">Oprogramowanie wspierające Ballet Crypto dla portfela Ballet. Ta aplikacja nie przechowuje danych portfela i nie ma dostępu do prywatnych kluczy użytkownika. Środki znajdują się całkowicie poza siecią i nikt nie może się do nich włamać, ani uzyskać do nich dostępu z poziomu tej aplikacji. Aplikacja umożliwia łatwe zarządzanie środkami w czasie rzeczywistym. Prywatność użytkownika to dla nas priorytet, więc nie wymagamy logowania na konta, nie pobieramy opłat miesięcznych.</p>
+          </div>
+          <div class="junior-information__item">
+            <div class="junior-information__point">
+              5
+            </div>
+            <p class="junior-information__item-description">Wsparcie wielowalutowe: Aplikacja Ballet Crypto umożliwia darmową aktywację większości dodatkowych kryptowalut. Niektóre ze wspieranych kryptowalut to: Bitcoin (BTC), Ethereum (ETH), wszystkie tokeny ERC20, XRP, Litecoin, BCH, Tether (USDT), USDC, TUSD, LINK, MKR, TRX, UNI, LEO, ATOM, CEL, DAI, FIL, AAVE, SNX, ZEC, YFI, COMP, ETC, SUSHI, OKB, GRT, UMA, DGB, OMG, NEXO, BAT, REN, PAX, 0x, BTG, KNC, REP, HEDG, MANA, SNT, CRV, NMR, BAL, BCD, GNT, STORJ, SPX, LOOM oraz wiele innych.</p>
+          </div>
+        </div>
+      </div>
+
 
       <div class="junior-delivery">
         <h4 class="junior-delivery__title">Regulamin dostaw i zwrotów</h4>

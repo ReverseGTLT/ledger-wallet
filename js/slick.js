@@ -1,4 +1,4 @@
-if($('body').width() < 922) {
+if($('body').width() < 768) {
     $('.slider').slick({
         arrows: false,
         dots: true,

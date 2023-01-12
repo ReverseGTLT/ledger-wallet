@@ -4,7 +4,7 @@
   width: 100%;
   display: flex;
   gap: 50px;
-  @include lg {
+  @include md {
     margin-inline: auto;
     display: block;
   }
@@ -14,7 +14,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
-  @include lg {
+  @include md {
     display: block;
     margin-inline: auto;
     max-width: 350px;

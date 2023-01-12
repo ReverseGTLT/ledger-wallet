@@ -3,13 +3,13 @@
 .header--junior-ladger {
   background-color: #000;
   height: 76px;
-  @include lg {
+  @include md {
     height: 60px;
   }
 }
 
 .box--junior-ladger {
-  @include lg {
+  @include md {
     padding-top: 20px;
   }
 }

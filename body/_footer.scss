@@ -9,7 +9,8 @@
   padding-block: 146px;
   background-color: #000;
   align-items: baseline;
-  @include lg {
+  gap: 30px;
+  @include md {
     grid-template-columns: 1fr 1.1fr;
     grid-template-areas: "a a" "b b" "c d";
     row-gap: 60px;
@@ -17,7 +18,7 @@
   }
   &-company {
     max-width: 153px;
-    @include lg {
+    @include md {
       grid-area: a;
     }
     &__title {
@@ -29,7 +30,7 @@
   }
   &-product {
     max-width: 191px;
-    @include lg {
+    @include md {
       grid-area: b;
     }
     &__item {
@@ -45,7 +46,7 @@
   }
   &-nav {
     max-width: 100px;
-    @include lg {
+    @include md {
       grid-area: c;
     }
     &__item {
@@ -61,7 +62,7 @@
   }
   &-cookies {
     max-width: 166px;
-    @include lg {
+    @include md {
       grid-area: d;
     }
     &__item {

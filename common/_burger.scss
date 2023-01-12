@@ -4,7 +4,7 @@
   height: 24px;
   position: relative;
   cursor: pointer;
-  @include lg-min {
+  @include md-min {
     display: none;
   }
   &-item {
